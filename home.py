@@ -7,10 +7,10 @@ st.set_page_config(page_title="DENIA - Deteksi Dini Anemia", layout="centered")
 col1, col2, col3 = st.columns([1,2,1])
 with col2:
     try:
-        logo = Image.open("logo.png")
+        logo = Image.open("Logo.png")
         st.image(logo, use_container_width=True)
     except:
-        st.info("Tambahkan file logo.png di folder utama untuk menampilkan logo.")
+        st.info("Tambahkan file Logo.png di folder utama untuk menampilkan logo.")
 
 # ===== Judul & Deskripsi =====
 st.title("🌸 Aplikasi DENIA - Deteksi Dini Anemia")
