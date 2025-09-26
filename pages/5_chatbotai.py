@@ -22,7 +22,9 @@ if prompt := st.chat_input("Ketik pertanyaan Anda..."):
                     for role, text in st.session_state.chat_history
                 ),
                 {"role": "user", "content": prompt},
-            ]
+            ],
+            max_tokens=100,      # batasi jawaban sekitar 100 token
+            temperature=0.5      # jawaban tetap jelas tapi sedikit variatif
         )
         reply = response.choices[0].message.content
     except Exception as e:
